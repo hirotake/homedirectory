@@ -12,7 +12,7 @@ end
 task :init do
   Dir.chdir(ENV["HOME"])
   @files.each do |f|
-    `ln -sf #{@dir}/#{f} #{f}`
+    `cp #{@dir}/#{f} #{f}`
   end
   paths = `find /opt -type d -name bin -o -name sbin | grep -v lib`
   open(".bashrc", "a") do |wio|
