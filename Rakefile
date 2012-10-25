@@ -14,6 +14,11 @@ task :init do
   @files.each do |f|
     `ln -sf #{@dir}/#{f} #{f}`
   end
+  paths = `find /opt -type d -name bin -o -name sbin | grep -v lib`
+  open(".bashrc", "a") do |wio|
+    wio.puts 'export PATH=%s:$PATH' % [ paths.split(/\n/).compact.join(":") ]
+  end
+  puts "Please execute '. ~/.bashrc'"
 end
 
 task :clean do
