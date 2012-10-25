@@ -8,13 +8,17 @@ end
 .sagentrc
 .rpmmacros
 )
+@exclude_paths = %w(
+lib
+redmine
+)
 
 task :init do
   Dir.chdir(ENV["HOME"])
   @files.each do |f|
     `cp #{@dir}/#{f} #{f}`
   end
-  paths = `find /opt -type d -name bin -o -name sbin | grep -v lib`
+  paths = `find /opt -type d \\( -name bin -o -name sbin \\) 2> /dev/null` 
   open(".bashrc", "a") do |wio|
     wio.puts 'export PATH=%s:$PATH' % [ paths.split(/\n/).compact.join(":") ]
   end
