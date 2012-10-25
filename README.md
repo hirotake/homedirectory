@@ -123,3 +123,17 @@ function md2w3m { Markdown.pl $1 | w3m -T text/html }
 </pre>
 
 ## [nkf Network Kanji Filter](http://en.sourceforge.jp/projects/nkf/)
+
+# Usage
+- Initialize home directory
+<pre>
+<code>
+rake -f .dotfiles/Rakefile init
+</code>
+</pre>
+- Clean up home directory
+<pre>
+<code>
+rake -f .dotfiles/Rakefile init
+</code>
+</pre>
