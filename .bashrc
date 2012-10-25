@@ -25,7 +25,7 @@ YELLOW="\[\033[1;33m\]"
 LIGHTGRAY="\[\033[0;37m\]"
 WHITE="\[\033[1;37m\]"
 
-PS1="\n(\`TZ=GMT LANG=C date +'%Y-%m-%d %H:%M %a %Z'\`) (\`TZ=PST8PDT LANG=C date +'%Y-%m-%d %H:%M %a %Z'\`)\n${BLUE}<<<$                                                    {RESET} ${BROWN}\u${RESET}@${LIGHTRED}\h${RESET} [${LIGHTCYAN}\w${RESET}] ${BLUE}>>>${RESET}\n${RED}\$${RESET} "
+PS1="\n(\`TZ=GMT LANG=C date +'%Y-%m-%d %H:%M %a %Z'\`) (\`TZ=PST8PDT LANG=C date +'%Y-%m-%d %H:%M %a %Z'\`)\n${BLUE}<<<${RESET} ${BROWN}\u${RESET}@${LIGHTRED}\h${RESET} [${LIGHTCYAN}\w${RESET}] ${BLUE}>>>${RESET}\n${RED}\$${RESET} "
 PS2="> "
 
 #GREP_OPTIONS="--color=always"
